@@ -5,7 +5,7 @@
     "start": "blitz start",
     "start:production": "blitz start --production --port $PORT",
     "studio": "blitz prisma studio",
-    "build": "blitz build",
+    "build": "NODE_ENV=production blitz prisma migrate deploy --preview-feature && blitz build",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "test": "jest",
     "test:watch": "jest --watch"
